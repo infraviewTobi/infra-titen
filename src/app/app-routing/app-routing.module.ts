@@ -10,6 +10,10 @@ const routes: Routes = [
       path: 'players',
       component: PlayersComponent,
   },
+  {
+    path: '**',
+    redirectTo:'players'
+},
 ];
 
 @NgModule({
