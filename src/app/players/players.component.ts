@@ -20,8 +20,8 @@ export class PlayersComponent implements OnInit {
   ngOnInit() {
   }
 
-  
-  
-    
 
+  editPlayer(id: number) {
+
+  }
 }

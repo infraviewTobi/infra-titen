@@ -1,5 +1,5 @@
 <mat-action-list *ngFor="let player of players">
   <div class="flex row col-50">
-  <button mat-list-item (click)="editPlayer(player.id)"> {{player.name}} </button>
-  <mat-icon>edit</mat-icon></div>
+  <button mat-list-item  > {{player.name}} </button>
+  <mat-icon [routerLink]="'/editplayer'">edit</mat-icon></div>
 </mat-action-list>
