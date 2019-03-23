@@ -1,4 +1,4 @@
-<section class="mat-typography">
+<section class="mat-typography fullheight">
   <mat-toolbar>
     <mat-toolbar-row>
       <ng-container *ngIf="router.url.indexOf('/overview')>-1">
@@ -6,20 +6,20 @@
         <button mat-button [routerLink]="'/players'">Spieler bearbeiten</button>
       </ng-container>
       <ng-container *ngIf="router.url.indexOf('/players')>-1">
-        <button mat-button [routerLink]="'/overview'"><</button>
-        <span>Spielerliste</span>
+        <button mat-button [routerLink]="'/overview'">
+          <</button> <span>Spielerliste</span>
       </ng-container>
       <ng-container *ngIf="router.url.indexOf('/statistics')>-1">
-        <button mat-button [routerLink]="'/overview'"><</button>
-        <span>Statistiken</span>
+        <button mat-button [routerLink]="'/overview'">
+          <</button> <span>Statistiken</span>
       </ng-container>
       <ng-container *ngIf="router.url.indexOf('/editplayer')>-1">
-        <button mat-button [routerLink]="'/players'"><</button>
-        <span>Spieler editieren</span>
+        <button mat-button [routerLink]="'/players'">
+          <</button> <span>Spieler editieren</span>
       </ng-container>
       <ng-container *ngIf="router.url.indexOf('/newtournament')>-1">
-        <button mat-button [routerLink]="'/overview'"><</button>
-        <span>Neues Turnier</span>
+        <button mat-button [routerLink]="'/overview'">
+          <</button> <span>Neues Turnier</span>
       </ng-container>
       <ng-container *ngIf="router.url.indexOf('/tournament')>-1">
         <span>Turniermodus</span>
@@ -35,5 +35,5 @@
       <button mat-button [routerLink]="'/tournament'">Match abbrechen</button>
     </mat-toolbar-row>
   </mat-toolbar>
-  <router-outlet></router-outlet>
+  <router-outlet class="fullheight"></router-outlet>
 </section>

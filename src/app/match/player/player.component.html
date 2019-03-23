@@ -1,0 +1,19 @@
+<div class="flex col-100 column center vertical-center fullheight" id='playground'>
+    <div class="flex col-100 column center vertical-center halfheight">
+        <h1>{{name}}</h1>
+        <h1>{{points}}</h1>
+    </div>
+    <div class="horizontal-divider"></div>
+    <div class="flex col-100 column center vertical-center halfheight">
+        <h1 *ngIf='win'>Winner</h1>
+        <h1 *ngIf='lose'>Loser</h1>
+        <ng-container *ngIf='!win && !lose'>
+            <button mat-raised-button (click)="score()">Point</button>
+            <div class="flex col-100 row center vertical-center stretch-container">
+                <button mat-raised-button class="stretch" (click)="smash()">Smash</button>
+                <button mat-raised-button class="stretch" (click)="ace()">Ass</button>
+                <button mat-raised-button class="stretch" (click)="fluke()">Fluke</button>
+            </div>
+        </ng-container>
+    </div>
+</div>

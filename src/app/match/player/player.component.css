@@ -1,0 +1,12 @@
+#playground {
+  background: #0d8191;
+}
+
+.stretch-container {
+  align-items: stretch;
+}
+
+.stretch{
+    flex:1;
+    margin:4px;
+}

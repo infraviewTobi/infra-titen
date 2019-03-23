@@ -13,6 +13,7 @@ import { EditplayerComponent } from './editplayer/editplayer.component';
 import { NewtournamentComponent } from './newtournament/newtournament.component';
 import { TournamentComponent } from './tournament/tournament.component';
 import { MatchComponent } from './match/match.component';
+import { PlayerComponent } from './match/player/player.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MatchComponent } from './match/match.component';
     EditplayerComponent,
     NewtournamentComponent,
     TournamentComponent,
-    MatchComponent
+    MatchComponent,
+    PlayerComponent
   ],
   imports: [
     BrowserModule,
