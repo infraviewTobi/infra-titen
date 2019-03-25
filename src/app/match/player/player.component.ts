@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { MatchService } from '../match.service';
+import {Component, OnInit, Input} from '@angular/core';
+import {MatchService} from '../match.service';
 
 @Component({
   selector: 'app-player',
@@ -17,6 +17,9 @@ export class PlayerComponent implements OnInit {
   win: boolean;
   lose: boolean;
   matchService: MatchService;
+  wonUmdi: boolean = false;
+  lostUmdi: boolean = false;
+  server: boolean = false;
 
   constructor(matchService: MatchService
   ) {
@@ -25,6 +28,12 @@ export class PlayerComponent implements OnInit {
 
   ngOnInit() {
     this.matchService.registerPlayer(this);
+  }
+
+  umdi() {
+    this.wonUmdi = true;
+    this.server = true;
+    this.matchService.umdi(this);
   }
 
   score() {
