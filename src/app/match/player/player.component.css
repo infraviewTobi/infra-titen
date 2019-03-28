@@ -6,7 +6,11 @@
   align-items: stretch;
 }
 
-.stretch{
-    flex:1;
-    margin:4px;
+.error {
+  background: #af6a71;
+}
+
+.stretch {
+  flex: 1;
+  margin: 4px;
 }

@@ -65,4 +65,12 @@ export class MatchService {
     }
     this.firstServer = player;
   }
+
+  pointForOpponent(player: any) {
+    if (player == this.playerOne) {
+      this.playerTwo.score();
+    } else if (player == this.playerTwo) {
+      this.playerOne.score();
+    }
+  }
 }

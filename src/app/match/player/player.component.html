@@ -2,7 +2,11 @@
   <div class="flex col-100 column center vertical-center halfheight">
     <h1>{{name}}</h1>
     <h1>{{points}}</h1>
-    <mat-icon *ngIf="!win && !lose&&server">pan_tool</mat-icon>
+    <div *ngIf="!win && !lose&&server">
+      <button mat-raised-button class="stretch" (click)="ace()">Ass</button>
+      <mat-icon>pan_tool</mat-icon>
+      <button mat-raised-button class="stretch error" (click)="error()">Fehler</button>
+    </div>
   </div>
   <div class="horizontal-divider"></div>
   <div class="flex col-100 column center vertical-center halfheight">
@@ -10,10 +14,10 @@
     <h1 *ngIf='lose'>Loser</h1>
     <ng-container *ngIf='!win && !lose'>
       <ng-container *ngIf="wonUmdi||lostUmdi">
-        <button mat-raised-button (click)="score()">Point</button>
+        <button mat-raised-button class="stretch" (click)="error()" class="error">Fehler</button>
         <div class="flex col-100 row center vertical-center stretch-container">
           <button mat-raised-button class="stretch" (click)="smash()">Smash</button>
-          <button mat-raised-button class="stretch" (click)="ace()">Ass</button>
+
           <button mat-raised-button class="stretch" (click)="fluke()">Fluke</button>
         </div>
       </ng-container>
