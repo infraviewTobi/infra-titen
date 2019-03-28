@@ -1,5 +1,5 @@
 <div class="flex col-100 column center vertical-center fullheight" id='playground'>
-  <div class="flex col-100 column center vertical-center halfheight">
+  <div class="flex col-100 column vertical-center halfheight">
     <h1>{{name}}</h1>
     <h1>{{points}}</h1>
     <div *ngIf="!win && !lose&&server">
@@ -13,16 +13,16 @@
     <h1 *ngIf='win'>Winner</h1>
     <h1 *ngIf='lose'>Loser</h1>
     <ng-container *ngIf='!win && !lose'>
-      <ng-container *ngIf="wonUmdi||lostUmdi">
+      <ng-container *ngIf="wonUmdi || lostUmdi">
         <button mat-raised-button class="stretch" (click)="error()" class="error">Fehler</button>
         <div class="flex col-100 row center vertical-center stretch-container">
-          <button mat-raised-button class="stretch" (click)="smash()">Smash</button>
+          <button mat-raised-button class="stretch" (click)="smash()">Direktpunkt</button>
 
-          <button mat-raised-button class="stretch" (click)="fluke()">Fluke</button>
+          <button mat-raised-button class="stretch" (click)="fluke()">Luckyshot</button>
         </div>
       </ng-container>
       <ng-container *ngIf="!wonUmdi&&!lostUmdi">
-        <button mat-raised-button (click)="umdi()">Umtiti</button>
+        <button mat-raised-button (click)="umdi()">Aufschlagsieger</button>
       </ng-container>
     </ng-container>
   </div>
