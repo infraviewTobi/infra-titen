@@ -15,6 +15,7 @@ export class PlayerComponent implements OnInit {
   public aces = 0;
   public flukes = 0;
   public errors = 0;
+  public serveErrors = 0;
   win: boolean;
   lose: boolean;
   matchService: MatchService;
@@ -65,6 +66,11 @@ export class PlayerComponent implements OnInit {
   lost() {
     this.lose = true;
     console.log('Player ' + this.name + ' lost');
+  }
+
+  serveError() {
+    this.serveErrors++;
+    this.matchService.pointForOpponent(this);
   }
 
   error() {
