@@ -8,7 +8,15 @@ import {Router} from "@angular/router";
 })
 export class AppComponent {
   constructor(public router: Router) {
+    this.fullScreen();
   }
 
-  title = 'infra-titen';
+  fullScreen() {
+    let elem = document.documentElement;
+    let methodToBeInvoked = elem.requestFullscreen ||
+      elem.webkitRequestFullScreen || elem['mozRequestFullscreen']
+      ||
+      elem['msRequestFullscreen'];
+    if (methodToBeInvoked) methodToBeInvoked.call(elem);
+  }
 }
